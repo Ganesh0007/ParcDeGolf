@@ -18,7 +18,7 @@ let GolfSchema = new Schema ({
 	description:{
         type : String
     },
-    manager:{
+    idManager:{
         type :String
     }
 },

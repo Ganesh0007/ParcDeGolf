@@ -1,15 +1,15 @@
 const express = require('express');
 const config = require('../configs/server.config');
 const bodyParser = require ('body-parser');
-const apiRouter = require('../routes/index');
-const cors=require('cors');
+const apiRouter = require('../routes/');
+//const cors=require('cors');
 
-// Démarer express
+// Start express
 const app = express();
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+//app.use(cors());
 
 // Routes
 app.use('/api/v1',apiRouter);

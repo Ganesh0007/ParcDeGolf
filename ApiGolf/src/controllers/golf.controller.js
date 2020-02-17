@@ -15,7 +15,7 @@ exports.createGolf = (req, res) => {
 );
 	golf.save((err) => {
 		if(err) {
-			console.log(err);
+			console.log('Error in golf save : ',err);
 		}
 		else {
 			console.log("Golf created")
@@ -28,7 +28,7 @@ exports.createGolf = (req, res) => {
 exports.updateGolf = (req, res) => {
 	Golf.findByIdAndUpdate(req.params.id, req.body, (err, golf) => {
 		if(err) {
-			console.log(err);
+			console.log("Error in golf update", err);
 		}
 		res.send("Golf is updated");
 	})
@@ -45,7 +45,7 @@ exports.deleteGolf = function(req, res){
 exports.oneGolf = (req, res) => {
 	Golf.findById(req.params.id, (err, golf) => {
 		if(err) {
-			console.log(err);
+			console.log("Error in oneGolf : ",err);
 		}
 		res.send(golf);
 	})

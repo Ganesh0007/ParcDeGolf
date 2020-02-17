@@ -14,7 +14,7 @@ exports.createManager = (req, res) => {
 );
 	manager.save((err) => {
 		if(err) {
-			console.log(err);
+			console.log("Error in save manager",err);
 		}
 		else {
 			console.log("Manager created")
@@ -36,7 +36,7 @@ exports.deleteManager = function(req, res){
 exports.updateManager = (req, res) => {
 	Manager.findByIdAndUpdate(req.params.id, req.body, (err, manager) => {
 		if(err) {
-			console.log(err);
+			console.log("Error in update manager", err);
 		}
 		res.send("Manager is updated");
 	})
@@ -46,7 +46,7 @@ exports.updateManager = (req, res) => {
 exports.oneManager = (req, res) => {
 	Manager.findById(req.params.id, (err, manager) => {
 		if(err) {
-			console.log(err);
+			console.log("Error in oneManager",err);
 		}
 		res.send(manager);
 	})

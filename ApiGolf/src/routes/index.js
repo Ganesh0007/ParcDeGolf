@@ -1,11 +1,12 @@
 const express = require('express');
-const app = express.Router();
+const Router = express.Router();
+
 const adminRoute = require('./admin.route');
 const golfRoute = require('./golf.route');
 const managerRoute = require('./manager.route');
 
-app.use(adminRoute);
-app.use(golfRoute);
-app.use(managerRoute);
+Router.use(adminRoute);
+Router.use(golfRoute);
+Router.use(managerRoute);
 
-module.exports = app;
+module.exports = Router;

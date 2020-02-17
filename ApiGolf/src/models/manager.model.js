@@ -19,6 +19,9 @@ let ManagerSchema = new Schema ({
         type : Number,
         minlength : 10,
         maxlength : 15
+    },
+    idGolf :{
+        type : String
     }
 },
 {
